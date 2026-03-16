@@ -47,6 +47,7 @@ def check_guess(guess: int, secret: int):
         return "Invalid", "⚠️ Please guess a number between 1 and 100."
     if guess == secret:
         return "Win", "🎉 Correct!"
+    # FIX: Now hint gives some useful advice on whether going lower or higher based on your guess
     if guess > secret:
         return "Too High", "📉 Go LOWER!"
     return "Too Low", "📈 Go HIGHER!"

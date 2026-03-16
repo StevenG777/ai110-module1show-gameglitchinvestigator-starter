@@ -25,13 +25,29 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [X] Describe the game's purpose.
+   - The game challenges player to guess an integer number that try to match the secret integer using the least attempts
+
+- [X] Detail which bugs you found.
+   - Attemps is not showing despite it was tracked sometimes, but attemp becomes negatives
+   - It allows you to enter number outside of range 1-100
+   - Once game overs, you cannot restart unless refreshing the page
+   - It gives wrong instruction regarding going up or down
+   - When you click the toggle to remove hint, it works, but it wouldn't work for opposite case
+   - Secret Number keep changing
+
+- [X] Explain what fixes you applied.
+   - Change to form submission to ensure states of both text input and submit button happen in one render cycle within Streamlit execution model using Claude Code Agent Mode
+   - Ensure all attempts initialization reset to 0 consistently using Claude Code Agent Mode
+   - Prevent invalid input to lose attempts using Claude Code Agent Mode
+   - Refactored logic into logic_utils.py using Claude Code Agent Mode
+   - Ensure guess input does not go out of range using Claude Code Agent Mode
+   - Now hint gives some useful advice on whether going lower or higher based on your guess
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [X] [Insert a screenshot of your fixed, winning game here]
+   - ![Screenshot of the app](./Screenshot.png)
 
 ## 🚀 Stretch Features
 
